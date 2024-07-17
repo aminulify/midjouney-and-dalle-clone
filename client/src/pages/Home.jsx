@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Loading from '../Shared/Loading';
 import FormField from '../Shared/FormField';
 import Card from '../Shared/Card';
+import axiosSecure from '../CustomHook/useAxiosSecure';
 
 
 const RenderCards = ({data, title}) =>{
@@ -25,11 +26,15 @@ const Home = () => {
         setLoading(true);
 
         try{
-            const res = await fetch('http://localhost:3000/generate')
-            if(res.ok){
-                const result = await res.json();
-                setAllPosts(result.data.reverse());
-            }
+
+            axiosSecure.get('/generate')
+            .then(res => {
+                setAllPosts(res.data.data)
+            })
+            .catch(error => {
+                console.log(error);
+            });
+           
         }
         catch(error){
 
