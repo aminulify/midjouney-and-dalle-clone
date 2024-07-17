@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Outfit", sans-serif;
+    
+}
+body{
+    cursor: url("../public/assets/cursor2.png"), auto;
+}
+
+:root{
+    --leftColor: #58c7fb;
+    --rightColor: #ff00e7;
+    --leftShadow: #58c7fb63;
+    --rightShadow: #ff00e663;
+    --leftHoverShadow: #58c7fb6d;
+    --rightHoverShadow: #ff00e670;
+    --toastify-color-progress-light: linear-gradient(-30deg, var(--leftColor), var(--rightColor)) !important;
+}
+
+
+.btn{
+    background-image: linear-gradient(-30deg, var(--leftColor), var(--rightColor));
+    box-shadow: 30px 30px 70px var(--leftShadow), -30px -30px 70px var(--rightShadow);
+    border-radius: 5px;
+    transition: all 0.4s ease-out;
+}
+.btn:hover{
+    z-index: 0;
+    box-shadow: 15px 15px 40px var(--leftHoverShadow), -15px -15px 40px var(--rightHoverShadow);
+}
+
+.loginBtn{
+    background-image: linear-gradient(-30deg, var(--leftColor), var(--rightColor));
+    border-radius: 5px;
+    transition: all 0.4s;
+}
+.loginBtn:hover{
+    z-index: 0;
+    background-image: linear-gradient(-30deg, var(--rightColor),var(--leftColor));
+}
+
+.btnText{
+    background-image: linear-gradient(-30deg, var(--leftColor), var(--rightColor));
+    background-clip: text;
+    color: transparent;
+}
+.border-style{
+    border-image: linear-gradient(to left, var(--leftColor), var(--rightColor));
+    border-bottom: 1.5px solid transparent;
+    padding-bottom: 2px;
+    border-image-slice: 1;
+    transition: all 0.3s;
+}
+.border-style:hover{
+    border-image: linear-gradient(to right, var(--leftColor), var(--rightColor));
+    border-image-slice: 1;
+} 
+
+.heading{
+    color: #001246;
+}
+.para{
+    color: #5a657f;
+}
+
+.snipper{
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    opacity: 50%;
+    animation: loading 0.5s infinite;
+}
+@keyframes loading {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.left-arrow>.icon-style{
+    transform: rotate(-45deg);
+    transition: all 0.3s;
+}
+.left-arrow:hover>.icon-style{
+    transform: rotate(0);
+}
+
+.login-shadow{
+    box-shadow: 2px 2px 18px var(--leftShadow), -2px -2px 18px var(--rightShadow);
+}
+
+.btn-zoomIn-zoomOut:hover{
+    transform: scale(1);
+    animation: zoomIn 0.7s infinite;
+    transition: all 0.7s;
+}
+@keyframes zoomIn {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* .gallery{
+    column-count: 3;
+    column-width: 33%;
+} */
