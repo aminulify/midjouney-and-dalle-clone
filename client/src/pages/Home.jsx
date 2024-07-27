@@ -9,10 +9,9 @@ const RenderCards = ({data, title}) =>{
     if(data?.length > 0){
         return data.map((post)=> <Card key={post._id} {...post}></Card>)
     }
-
-    return (
-        <h2 className='font-bold heading text-md uppercase'>{title}</h2>
-    )
+    else{
+        return <Loading></Loading>
+    }
 }
 
 const Home = () => {
