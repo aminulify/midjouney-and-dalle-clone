@@ -9,17 +9,24 @@
     "nodemon": "^3.1.4",
     "openai": "^4.52.7",
     "punycode": "^2.3.1",
-    "react-toastify": "^10.0.5"
+    "react-toastify": "^10.0.5",
+    "vercel": "^35.2.1"
   },
   "name": "ai-image-generator-server",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index"
+    "start": "node index.js",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
+  }
 }
