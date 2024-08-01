@@ -17,8 +17,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+<<<<<<< HEAD
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+>>>>>>> 360ab5c05ebd1e876a17cbf39a06cd3e333f247c
   },
   "keywords": [],
   "author": "",
